@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.guide{
+    position: absolute;
+    bottom: 145px;
+    color: #EAEDF0;
+    background: #333;
+    padding: 10px;
+}
+.guide2{
+    position: absolute;
+    bottom: 100px;
+    color: #EAEDF0;
+    background: #333;
+    padding: 10px;
+}
+
+body{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 5%;
+}
+.background1{
+    background: #EAEDF0;
+}
+section{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 3em;
+}
+.clock{
+    font-size: 50px;
+    padding-bottom: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 15px;
+}
+.input{
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 2em;
+}
+#button{
+    padding: 5px;
+    width: 60px;
+    border: none;
+    box-shadow: 1px 0.5px 1px 1px;
+    cursor: pointer;
+}
+#button2{
+    padding: 5px;
+    width: 60px;
+    border: none;
+    box-shadow: 1px 0.5px 1px 1px;
+    cursor: pointer;
+}
+form{
+    padding-top: 20%;
+}
+
+.slider{
+    position: relative;
+}
+
+.slide{
+    display: none;
+    transition: opacity 04s ease-in-out;
+}
+.slide.current{
+    display: block;
+}
+
+.slide .content{
+    position: absolute;
+    top: 300px;
+    left: -800px;
+    opacity: 0;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.slide .content h1{
+    margin-bottom: 10px;
+}
+
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(800px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.slide{
+    height: 450px;
+}
+
+button#prev{
+    position: absolute;
+    top: 400px;
+    left: 510px;
+}
+button#next{
+    position: absolute;
+    top: 400px;
+    right: 200px;
+}
+.button{
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 12px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.d-show{
+    opacity: 1;
+    position: absolute;
+    top: 420px;
+    left: 300px;
+    padding: 8px;
+    width: 90px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 1px 0.5px 1px 1px;
+    cursor: pointer;
+}
+.d-none{
+    display: none;
+}
+.hide-form{
+    opacity: 0;
+}
+.show-form{
+    opacity: 1;
+}
+.button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 700px){
+    body{
+        width: 200px;
+        margin: 0px auto;
+        padding: 2%;
+    }
+    section{
+        height: 150vh;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 3em;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .clock{
+        font-size: 1em;
+        padding-bottom: 2%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    /* .slider{
+        height: 2px;
+    } */
+    .slide{
+        width: 20px;
+        position: absolute;
+        top: 250px;
+        left: -300px;
+        margin-top: 40px;
+    }
+    .slide .content{
+        position: absolute;
+        top: 500px;
+        left: -800px;
+        opacity: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        padding: 5px;
+    }
+    .slide{
+        height: 450px;
+    }
+    form{
+        padding-top: 25%;
+        padding-left: 50%;
+    }
+    button#prev{
+        position: absolute;
+        top: 650px;
+        left: 130px;
+    }
+    button#next{
+        position: absolute;
+        top: 650px;
+        left: 610px;
+    }
+    .d-show{
+        opacity: 1;
+        position: absolute;
+        top: 425px;
+        left: 900px;
+        padding: 8px;
+        width: 90px;
+        margin-top: 20px;
+        border: none;
+        box-shadow: 1px 0.5px 1px 1px;
+        cursor: pointer;
+        display: none;
+    }
+    .guide{
+        position: absolute;
+        bottom: 200px;
+        right: 20px;
+        color: #EAEDF0;
+        background: #333;
+        padding: 10px;
+        display: none;
+    }
+    .hide-form{
+        opacity: 1;
+    }
+}
+@media(max-width: 900px){
+    body{
+        width: 700px;
+        margin: 0px auto;
+        padding: 5%;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .clock{
+        font-size: 50px;
+        padding-bottom: 3%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .slide{
+        width: 600px;
+        position: absolute;
+        top: 250px;
+        left: -300px;
+        margin-top: 20px;
+    }
+    .slide .content{
+        position: absolute;
+        top: 300px;
+        left: -800px;
+        opacity: 0;
+        width: 70%;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        padding: 10px;
+    }
+    section{
+        height: 150vh;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 3em;
+    }
+    .guide{
+        position: absolute;
+        bottom: 250px;
+        right: 60px;
+        color: #EAEDF0;
+        background: #333;
+        padding: 10px;
+    }
+    .d-show{
+        opacity: 1;
+        position: absolute;
+        top: 325px;
+        left: 250px;
+        padding: 8px;
+        width: 90px;
+        margin-top: 20px;
+        border: none;
+        box-shadow: 1px 0.5px 1px 1px;
+        cursor: pointer;
+    }
+    button#prev{
+        position: absolute;
+        top: 650px;
+        left: 130px;
+    }
+    button#next{
+        position: absolute;
+        top: 650px;
+        left: 610px;
+    }
+}
+
+/* Background images */
+ .slide:first-child{
+    background: url("img/AI.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(2){
+    background: url("img/language.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(3){
+    background: url("img/platform.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(4){
+    background: url("img/code.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(5){
+    background: url("img/manu.jpg") no-repeat center center/cover;
+}

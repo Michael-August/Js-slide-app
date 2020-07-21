@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="slide.css">
+    <title>August.slide</title>
+</head>
+<body class="background1 background2">
+    <!-- Time, Form and slide -->
+    <section>
+        <center>
+        <!-- Time -->
+            <div id="time" class="clock">
+                
+            </div>
+        </center>
+        <!-- Form -->
+        <div class="container">
+            <form action="" class="hide-form">
+                <input type="text" name="" id="time" class="input"><br>
+                <input type="text" name="" id="food" class="input"><br>
+                <input type="button" value="Add" id="button" class="set" onclick="addEvent()">
+                <input type="button" value="Set" id="button2" class="set" onclick="setEvent()">
+                <input type="button" value="close X" id="button" class="d-none" onclick="closeForm()">
+            </form>
+            <!-- slide -->
+            <div class="slider">
+                <div class="slide current">
+                    <div class="content">
+                        <h1>BreakFast Time</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placea
+                            t nulla fuga asperiores quae, culpa deleniti!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Launch Time</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla fuga 
+                            asperiores quae, culpa deleniti!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Dinner Time</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Placeat nulla fuga asperiores quae, culpa deleniti!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Code Time</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Placeat nulla fuga asperiores quae, culpa deleniti!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Sleep Time</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Placeat nulla fuga asperiores quae, culpa deleniti!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="foodstuff"></p>
+        <div class="buttons">
+            <button id="prev" class="button" onclick="prevSlide()">&lt;</button>
+            <button id="next" class="button" onclick="nextSlide()">&gt;</button>
+        </div>
+        <input type="button" value="open form" class="d-show" onclick="openForm()">
+        <p class="guide">click the openform button to set an event.</p>
+        <!-- <p class="guide guide2">use the add to add and the set to set</p> -->
+    </section>
+    <script src="slide.js"></script>
+</body>
+</html>
